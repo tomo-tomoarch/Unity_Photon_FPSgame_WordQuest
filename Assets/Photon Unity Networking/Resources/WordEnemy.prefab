@@ -374,8 +374,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 663241733415588297}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 21
+  instantiationId: 21
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &663241733415588297
@@ -395,6 +395,7 @@ MonoBehaviour:
   - {fileID: 4809822732356550006, guid: 68ffc6be64d16bc42a867812665ce4fe, type: 3}
   - {fileID: 7081735987387984064, guid: 69d235a4a7597b84699fd871c28b1ddc, type: 3}
   - {fileID: 1136813265985912935, guid: 4246d89031907e84e9ad45633f289013, type: 3}
+  words: []
   health: 100
   enemyText: {fileID: 735766646011400183, guid: 9b5e2011a90dc4944a2b647b33c91b04,
     type: 3}
@@ -5500,7 +5501,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7933972918407543840}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

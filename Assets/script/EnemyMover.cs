@@ -14,6 +14,7 @@ public class EnemyMover : Photon.MonoBehaviour
 
     public GameObject life;
     public GameObject[] items;
+    public GameObject[] words;
 
     Vector3 position;
     Quaternion rotation;
@@ -38,11 +39,16 @@ public class EnemyMover : Photon.MonoBehaviour
 
     void Start()
     {
+        //倒した敵の数表示
         enemyText = GameObject.Find("enemyText").GetComponent<Text>();
       
             gameController = GameObject.Find("GameController").GetComponent<GameController>();
             enemyText.text = gameController.enemyCount.ToString() + "enemy killed";
-     
+
+        //文字の挿入
+        var wordPosition = PhotonNetwork.Instantiate("WordA", new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Quaternion.identity , 0);
+        wordPosition.transform.parent = gameObject.transform;
+
 
         if (photonView.isMine)
         {
