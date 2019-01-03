@@ -244,8 +244,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 21
+  instantiationId: 21
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!65 &2751333283990087126
@@ -334,7 +334,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 586dcf44b459e7741ab2f89c8afa47f5, type: 3}
+  - {fileID: 2100000, guid: 0605e6bb6ae1c0c4da8622565929db13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -411,7 +411,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 586dcf44b459e7741ab2f89c8afa47f5, type: 3}
+  - {fileID: 2100000, guid: 0605e6bb6ae1c0c4da8622565929db13, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
