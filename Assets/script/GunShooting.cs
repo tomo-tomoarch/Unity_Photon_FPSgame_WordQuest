@@ -76,9 +76,15 @@ public class GunShooting : MonoBehaviour {
                     explode.transform.position = hit.point;
                     explode.GetComponent<ParticleSystem>().Play();
                 }
-
-                //cycle impact effects
-                impacts[currentImpact].transform.position = hit.point;
+                if (hit.transform.tag == "word")
+                {
+                    hitExplosion.Play();
+                    hit.transform.parent.GetComponent<PhotonView>().RPC("GetShot", PhotonTargets.All, damage);
+                }
+                    explode.transform.position = hit.point;
+                    explode.GetComponent<ParticleSystem>().Play();
+                    //cycle impact effects
+                    impacts[currentImpact].transform.position = hit.point;
                 impacts[currentImpact].GetComponent<ParticleSystem>().Play();
 
                 if (++currentImpact >= maxImpacts)

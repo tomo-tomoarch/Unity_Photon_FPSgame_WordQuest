@@ -11,6 +11,7 @@ TagManager:
   - ItemPower
   - ItemLife
   - ItemFast
+  - word
   layers:
   - Default
   - TransparentFX
