@@ -15,6 +15,7 @@ public class EnemyMover : Photon.MonoBehaviour
     public GameObject life;
     public GameObject[] items;
     public GameObject[] words;
+   
 
     Vector3 position;
     Quaternion rotation;
@@ -46,8 +47,44 @@ public class EnemyMover : Photon.MonoBehaviour
             enemyText.text = gameController.enemyCount.ToString() + "enemy killed";
 
         //文字の挿入
-        var wordPosition = PhotonNetwork.Instantiate("WordA", new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Quaternion.identity , 0);
-        wordPosition.transform.parent = gameObject.transform;
+        int wordNumber = Random.Range(2, 6);
+
+        for (int i = 0; i < wordNumber; i++)
+        {
+            int dice = Random.Range(0, 5);
+
+            if(dice == 0)
+            {
+                //文字の挿入
+                var wordPosition = PhotonNetwork.Instantiate("WordA", new Vector3(transform.position.x + 3 * i, transform.position.y + 2f, transform.position.z), Quaternion.identity, 0);
+                wordPosition.transform.parent = gameObject.transform;
+            }else if (dice == 1)
+            {
+                //文字の挿入
+                var wordPosition = PhotonNetwork.Instantiate("WordI", new Vector3(transform.position.x + 3 * i, transform.position.y + 2f, transform.position.z), Quaternion.identity, 0);
+                wordPosition.transform.parent = gameObject.transform;
+            }
+            else if (dice == 2)
+            {
+                //文字の挿入
+                var wordPosition = PhotonNetwork.Instantiate("WordU", new Vector3(transform.position.x + 3 * i, transform.position.y + 2f, transform.position.z), Quaternion.identity, 0);
+                wordPosition.transform.parent = gameObject.transform;
+            }
+            else if (dice == 3)
+            {
+                //文字の挿入
+                var wordPosition = PhotonNetwork.Instantiate("WordE", new Vector3(transform.position.x + 3 * i, transform.position.y + 2f, transform.position.z), Quaternion.identity, 0);
+                wordPosition.transform.parent = gameObject.transform;
+            }
+            else if (dice == 4)
+            {
+                //文字の挿入
+                var wordPosition = PhotonNetwork.Instantiate("WordO", new Vector3(transform.position.x + 3 * i, transform.position.y + 2f, transform.position.z), Quaternion.identity, 0);
+                wordPosition.transform.parent = gameObject.transform;
+            }
+        }
+
+        
 
 
         if (photonView.isMine)
