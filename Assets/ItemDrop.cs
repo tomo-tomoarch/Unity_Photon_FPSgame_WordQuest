@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    public GameObject[] items;
-
+   
     private void OnDestroy()
     {
         Vector3 currentposition = this.transform.position;
         Quaternion currentquanternion = this.transform.rotation;
 
-        int index = Random.Range(0, items.Length);
+        int index = Random.Range(0, 3);
 
         if (index == 0)
         {
@@ -20,20 +19,7 @@ public class ItemDrop : MonoBehaviour
             currentquanternion,
             0);
         }
-        else if (index == 1)
-        {
-            PhotonNetwork.Instantiate("ItemA",
-            currentposition,
-            currentquanternion,
-            0);
-        }
-        else if (index == 2)
-        {
-            PhotonNetwork.Instantiate("ItemA",
-            currentposition,
-            currentquanternion,
-            0);
-        }
+        
     }
         // Start is called before the first frame update
         void Start()

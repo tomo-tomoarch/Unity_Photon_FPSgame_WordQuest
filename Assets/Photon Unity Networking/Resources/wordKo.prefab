@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6456190229584880503}
   m_Layer: 0
   m_Name: wordKo
-  m_TagString: Untagged
+  m_TagString: word
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
