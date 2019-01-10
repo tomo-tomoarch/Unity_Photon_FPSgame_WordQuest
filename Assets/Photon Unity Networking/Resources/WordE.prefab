@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 1825693247727982667}
   - component: {fileID: 1271712684430308981}
   - component: {fileID: 8862507991440363197}
+  - component: {fileID: 8105916934715263234}
   m_Layer: 0
   m_Name: WordE
   m_TagString: word
@@ -398,8 +399,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 21
+  instantiationId: 21
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!54 &1271712684430308981
@@ -431,3 +432,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.011233974, y: 0.011418116, z: 0.0037509152}
   m_Center: {x: 0.0003186047, y: -0.00750077, z: 0.0016931151}
+--- !u!114 &8105916934715263234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6722900044299170201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d1ba948c6a5cb49b72d7cc39649108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

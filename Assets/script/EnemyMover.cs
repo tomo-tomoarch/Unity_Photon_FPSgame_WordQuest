@@ -255,7 +255,7 @@ public class EnemyMover : Photon.MonoBehaviour
             gameController.StartSpawnProcess(3f);
             gameController.enemyCount += 1;
             enemyText.text = gameController.enemyCount.ToString() + "enemy killed";
-            int index = Random.Range(0, items.Length);
+            int index = Random.Range(0, 6);
             if(index == 0)
             {
                 PhotonNetwork.Instantiate("ItemLife",

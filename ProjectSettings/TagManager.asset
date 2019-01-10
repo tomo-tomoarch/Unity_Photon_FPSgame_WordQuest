@@ -12,6 +12,16 @@ TagManager:
   - ItemLife
   - ItemFast
   - word
+  - A
+  - I
+  - U
+  - E
+  - O
+  - Ka
+  - Ki
+  - Ku
+  - Ke
+  - Ko
   layers:
   - Default
   - TransparentFX

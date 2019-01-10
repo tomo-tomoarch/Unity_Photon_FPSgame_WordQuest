@@ -2,34 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemDrop : MonoBehaviour
+public class ItemDropO : MonoBehaviour
 {
-   
+
     private void OnDestroy()
     {
         Vector3 currentposition = this.transform.position;
         Quaternion currentquanternion = this.transform.rotation;
 
-        int index = Random.Range(0, 3);
+        int index = Random.Range(0, 10);
 
         if (index == 0)
         {
-            PhotonNetwork.Instantiate("ItemA",
+            PhotonNetwork.Instantiate("ItemO",
             currentposition,
             currentquanternion,
             0);
         }
-        
+
     }
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

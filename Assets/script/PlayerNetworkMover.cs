@@ -10,6 +10,18 @@ public class PlayerNetworkMover : Photon.MonoBehaviour
     [SerializeField] Text winText;
     [SerializeField] Text healthText;
 
+    [SerializeField] GameObject A;
+    [SerializeField] GameObject I;
+    [SerializeField] GameObject U;
+    [SerializeField] GameObject E;
+    [SerializeField] GameObject O;
+    [SerializeField] GameObject Ka;
+    [SerializeField] GameObject Ki;
+    [SerializeField] GameObject Ku;
+    [SerializeField] GameObject Ke;
+    [SerializeField] GameObject Ko;
+
+
     public FirstPersonController firstPersonController;
 
     public delegate void Respawn(float time);
@@ -184,6 +196,115 @@ public class PlayerNetworkMover : Photon.MonoBehaviour
                 GunShooting gunShooting = GameObject.Find("Cylinder").GetComponent<GunShooting>();
                 gunShooting.damage += 10f;
             }
-         }
+         } else if (other.gameObject.CompareTag("A"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 =GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(A);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("I"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(I);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("U"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(U);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("E"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(E);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("O"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(O);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("Ka"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(Ka);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("Ki"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(Ki);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("Ku"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(Ku);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("Ke"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(Ke);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
+        else if (other.gameObject.CompareTag("Ko"))
+        {
+            PhotonNetwork.Destroy(other.gameObject); //ぶつかった相手をディアクティベート（消える
+
+            if (photonView.isMine)
+            {
+                GameObject Inventory1 = GameObject.Find("inventory1");
+                GameObject prefab = (GameObject)Instantiate(Ko);
+                prefab.transform.SetParent(Inventory1.transform, false);
+            }
+        }
     }
 }

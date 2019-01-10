@@ -421,6 +421,16 @@ MonoBehaviour:
   winText: {fileID: 3283044193666792653, guid: 290804521c196a44a8d0d2bda73fec2b, type: 3}
   healthText: {fileID: 5644023697196645965, guid: 0d0e76e4de9866a4a82dedb9e12586fd,
     type: 3}
+  A: {fileID: 6635891958607537300, guid: 14b81277d5618414fbaccf749b52d841, type: 3}
+  I: {fileID: 755475340591809390, guid: d47b518a94c936b44b5c2c00f426edc3, type: 3}
+  U: {fileID: 4257325555576757145, guid: ea1d02be7bde566429c214d7af1bd8c2, type: 3}
+  E: {fileID: 7777069622674028959, guid: d1009855a9cb0914baa04cd0e38709ca, type: 3}
+  O: {fileID: 7098010278845738806, guid: a722ea2918f4ec74d9969b58ef0c0777, type: 3}
+  Ka: {fileID: 6004745409968092709, guid: 97bad61daa40ab54fb16473c9e290f98, type: 3}
+  Ki: {fileID: 6984808843659915580, guid: 59e0bf9e2f99ceb47b918d39963567f7, type: 3}
+  Ku: {fileID: 1000412819845358488, guid: d4e3069b19e35994d8c2a548ec682a61, type: 3}
+  Ke: {fileID: 4931469491778911116, guid: 583e68200f8629343800d689434305c1, type: 3}
+  Ko: {fileID: 6673253585649501384, guid: 7ff46a84122c1dd4797e213f068465a5, type: 3}
   firstPersonController: {fileID: 114644036235884338}
   button: {fileID: 584315087555310539, guid: 101364e6b952fe743a7792204ff256a1, type: 3}
   life: {fileID: 871687795446594500}
@@ -873,6 +883,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4463082706111742}
     m_Modifications:
+    - target: {fileID: 4205831864636980457, guid: 2684dee602cabe347addb8a47e0ccfb8,
+        type: 3}
+      propertyPath: m_Name
+      value: Shower
+      objectReference: {fileID: 0}
     - target: {fileID: 4205831864636874953, guid: 2684dee602cabe347addb8a47e0ccfb8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -932,11 +947,6 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4205831864636980457, guid: 2684dee602cabe347addb8a47e0ccfb8,
-        type: 3}
-      propertyPath: m_Name
-      value: Shower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2684dee602cabe347addb8a47e0ccfb8, type: 3}

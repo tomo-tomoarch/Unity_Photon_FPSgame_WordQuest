@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 4716993567066353715}
   - component: {fileID: 6901028749070231861}
   - component: {fileID: 6456190229584880503}
+  - component: {fileID: 3386440250106421799}
   m_Layer: 0
   m_Name: wordKo
   m_TagString: word
@@ -245,3 +246,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.010704727, y: 0.011084883, z: 0.0031173707}
   m_Center: {x: -0.0011575698, y: -0.0065212403, z: 0.0015498352}
+--- !u!114 &3386440250106421799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8617618266538700569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63a37d65f8b59549ad2fa221b4b5def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
