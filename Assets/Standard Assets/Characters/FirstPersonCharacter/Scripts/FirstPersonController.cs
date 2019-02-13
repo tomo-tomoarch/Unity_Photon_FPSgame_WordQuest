@@ -189,7 +189,10 @@ namespace UnitySampleAssets.Characters.FirstPerson
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
-
+            /*
+            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            */
             bool waswalking = _isWalking;
 
 #if !MOBILE_INPUT
@@ -199,7 +202,12 @@ namespace UnitySampleAssets.Characters.FirstPerson
 #endif
             // set the desired speed to be walking or running
             speed = _isWalking ? walkSpeed : runSpeed;
-            _input = new Vector2(horizontal, vertical);
+
+            ///変更　原文
+            //_input = new Vector2(horizontal, vertical);
+            ///ここまで
+
+            Vector2 _input = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
 
             // normalize input if it exceeds 1 in combined length:
             if (_input.sqrMagnitude > 1) _input.Normalize();
