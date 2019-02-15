@@ -92,6 +92,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+            OVRInput.Update();
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -187,8 +188,8 @@ namespace UnitySampleAssets.Characters.FirstPerson
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            float horizontal = CrossPlatformInputManager.GetAxis("Mouse X");
+            float vertical = CrossPlatformInputManager.GetAxis("Mouse Y");
             /*
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -207,11 +208,20 @@ namespace UnitySampleAssets.Characters.FirstPerson
             //_input = new Vector2(horizontal, vertical);
             ///ここまで
 
-            Vector2 _input = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
+            ///ダメだったやつ
+            //OVRInput.Update();
+            //Vector2 _input = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);//改変した部分
 
+            ///追加 rotateより転記
+
+            _input = new Vector2(horizontal, vertical);
+
+
+            ///変更　原文
             // normalize input if it exceeds 1 in combined length:
             if (_input.sqrMagnitude > 1) _input.Normalize();
-
+            ///ここまで
+        
             // handle speed change to give an fov kick
             // only if the player is going to a run, is running and the fovkick is to be used
             if (_isWalking != waswalking && useFOVKick && _characterController.velocity.sqrMagnitude > 0)
@@ -223,14 +233,16 @@ namespace UnitySampleAssets.Characters.FirstPerson
 
         private void RotateView()
         {
-            Vector2 mouseInput = _mouseLook.Clamped(_yRotation, transform.localEulerAngles.y);
+            //ココをコメントアウトしてみる
+            //Vector2 mouseInput = _mouseLook.Clamped(_yRotation, transform.localEulerAngles.y);
 
-            // handle the roation round the x axis on the camera
-            _camera.transform.localEulerAngles = new Vector3(-mouseInput.y, _camera.transform.localEulerAngles.y,
-                                                             _camera.transform.localEulerAngles.z);
-            _yRotation = mouseInput.y;
-            transform.localEulerAngles = new Vector3(0, mouseInput.x, 0);
-            _cameraRefocus.GetFocusPoint();
+            /// handle the roation round the x axis on the camera
+
+            //_camera.transform.localEulerAngles = new Vector3(-mouseInput.y, _camera.transform.localEulerAngles.y,
+            //                                                 _camera.transform.localEulerAngles.z);
+            //_yRotation = mouseInput.y;
+            //transform.localEulerAngles = new Vector3(0, mouseInput.x, 0);
+            //_cameraRefocus.GetFocusPoint();
         }
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
