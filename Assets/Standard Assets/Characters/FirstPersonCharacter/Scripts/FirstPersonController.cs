@@ -188,8 +188,13 @@ namespace UnitySampleAssets.Characters.FirstPerson
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Mouse X");
-            float vertical = CrossPlatformInputManager.GetAxis("Mouse Y");
+            Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
+
+            float horizontal = primaryTouchpad.x;
+            float vertical = primaryTouchpad.y;
+
+            //float horizontal = -CrossPlatformInputManager.GetAxis("Mouse X"); //マイナスを追加
+            //float vertical = CrossPlatformInputManager.GetAxis("Mouse Y");
             /*
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -214,7 +219,7 @@ namespace UnitySampleAssets.Characters.FirstPerson
 
             ///追加 rotateより転記
 
-            _input = new Vector2(horizontal, vertical);
+            _input = new Vector2(horizontal* walkSpeed * 10, vertical* walkSpeed * 10);//*speedを追加
 
 
             ///変更　原文

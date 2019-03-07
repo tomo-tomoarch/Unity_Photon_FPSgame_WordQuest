@@ -36,7 +36,8 @@ public class GunShooting : MonoBehaviour {
     void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") && !Input.GetKey(KeyCode.LeftShift))
+        //if (Input.GetButtonDown("Fire1") && !Input.GetKey(KeyCode.LeftShift))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger) && !Input.GetKey(KeyCode.LeftShift))
         {
 
             muzzleFlash.Play();
